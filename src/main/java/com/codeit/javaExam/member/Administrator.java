@@ -17,6 +17,7 @@ public class Administrator extends Member {
     public String toString() {
         return String.format("Member(id=%s, name=%s, age=%s, email=%s, role=%s, allocated=%s)", super.id, super.name, super.age, super.email, this.role, this.allocatedAt);
 //        부모 클래스인 Member 클래스의 필드는 private으로 은닉화하였기 때문에, 접근 불가능(빌드 에러 발생)
+//        해결 방안 -> 부모 클래스인 Member 클래스의 필드의 접근 제어자를 protected로 변경하면 접근 가능
     }
 
     public String getRole() {
