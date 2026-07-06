@@ -7,9 +7,10 @@ public class JavaExamApplication {
 
         int countdown = 5;
 
-//      while문 : 언제 끝낼지에 대한 조건을 설정해놓은 것을 바탕으로 루프를 돈다.
-        while (countdown > 0) {
+//      do-while문 : '무조건 한번은 실행된다'는 사실을 알려주기 위한 예제
+//      int형의 범위인 -21억까지 실행되다가 종료됨.
+        do {
             System.out.println("countdown = " + countdown--);
-        }
+        } while (countdown < 5);
     }
 }
