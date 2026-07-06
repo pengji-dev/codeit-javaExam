@@ -8,27 +8,18 @@ public class JavaExamApplication {
 //		SpringApplication.run(JavaExamApplication.class, args);
         Scanner sc = new Scanner(System.in);
 
-        String dayType;
         System.out.println("요일을 입력하세요. ex) MONDAY");
         String day = sc.nextLine();
 
-        switch (day) {
-            case "MONDAY":
-            case "TUESDAY":
-            case "WEDNESDAY":
-            case "THURSDAY":
-            case "FRIDAY":
-                dayType = "Weekday";
-                break;
-            case "SATURDAY":
-            case "SUNDAY":
-                dayType = "Weekend";
-                break;
-            default:
-                dayType = "Unknown";
-        }
+        String dayType = switch (day) {
+            case "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY" -> "Weekday";
+            case "SATURDAY", "SUNDAY" -> "Weekend";
+            default -> "Unknown";
+        };    // 무언가 대입하는 식(Expression)이므로 끝에 세미콜론(;) 필수!
 
         System.out.println(dayType);
     }
-//	Java 8 버전: switch문엔 각 case 조건 마지막에 break를 넣어줘야 했다.
+//	Java 14 버전: break 쓰지 않고 간단하게 switch문 사용 가능하며 ':' 아닌 '->' 사용
+//  switch문 자체적으로 값 반환 가능 : switch문 각각 case 조건 안에서 바로 값 반환
+//  switch문에서 다수의 case 조건을 하나로 묶을 수 있음 : 다수의 조건을 ','으로 이으면 됨.
 }
