@@ -4,10 +4,12 @@ package com.codeit.javaExam;
 public class JavaExamApplication {
     public static void main(String[] args) {
 //		SpringApplication.run(JavaExamApplication.class, args);
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("i = " + i);
+        
+//      중첩 for문
+        for (int i = 1; i <= 3; i++) {
+            for (int j = 1; j <= 2; j++) {
+                System.out.println("i = " + i + ", j = " + j);
+            }
         }
-
-//        일반 for문 : 시작이 'int i = 1;'부터면 종료는 'i <= 5;'가 됨. / 시작이 'int i = 0;'부터면 종료는 'i < 5;'가 됨.
     }
 }
