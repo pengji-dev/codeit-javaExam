@@ -1,17 +1,34 @@
 package com.codeit.javaExam;
 
+import java.util.Scanner;
+
 //@SpringBootApplication
 public class JavaExamApplication {
     public static void main(String[] args) {
 //		SpringApplication.run(JavaExamApplication.class, args);
-        int age = 20;
-        boolean isStudent = true;
+        Scanner sc = new Scanner(System.in);
 
-        if (age >= 18 && isStudent) {
-            System.out.println("성인 학생");
+        String dayType;
+        System.out.println("요일을 입력하세요. ex) MONDAY");
+        String day = sc.nextLine();
+
+        switch (day) {
+            case "MONDAY":
+            case "TUESDAY":
+            case "WEDNESDAY":
+            case "THURSDAY":
+            case "FRIDAY":
+                dayType = "Weekday";
+                break;
+            case "SATURDAY":
+            case "SUNDAY":
+                dayType = "Weekend";
+                break;
+            default:
+                dayType = "Unknown";
         }
-//        중첩 if-else문을 사용할 수 있으나 들여쓰기가 너무 많이 발생하기 때문에 안티패턴에 해당한다.
-//        가독성과 비즈니스 로직 상 명료성을 고려해서 작성해야 한다.
-    }
 
+        System.out.println(dayType);
+    }
+//	Java 8 버전: switch문엔 각 case 조건 마지막에 break를 넣어줘야 했다.
 }
