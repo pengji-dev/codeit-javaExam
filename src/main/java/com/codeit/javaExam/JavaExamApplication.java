@@ -4,12 +4,12 @@ package com.codeit.javaExam;
 public class JavaExamApplication {
     public static void main(String[] args) {
 //		SpringApplication.run(JavaExamApplication.class, args);
-        
-//      중첩 for문
-        for (int i = 1; i <= 3; i++) {
-            for (int j = 1; j <= 2; j++) {
-                System.out.println("i = " + i + ", j = " + j);
-            }
+
+//      향상된 for문 : 배열이나 JCF(Java Collection Framework) 다양한 자료구조로부터 하나씩 꺼내오는 방식
+        int[] scores = {90, 85, 78};
+
+        for (int s : scores) {
+            System.out.println("점수 : " + s);
         }
     }
 }
