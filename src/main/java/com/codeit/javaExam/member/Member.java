@@ -1,4 +1,4 @@
-package com.codeit.javaExam;
+package com.codeit.javaExam.member;
 
 public class Member {
     Integer id;     // Reference Type 주소를 담는 그릇 : 객체가 담기며, NULL이 들어갈 수 없다.
