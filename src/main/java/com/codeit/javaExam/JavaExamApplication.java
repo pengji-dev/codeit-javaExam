@@ -1,13 +1,14 @@
 package com.codeit.javaExam;
 
+import com.codeit.javaExam.member.Administrator;
 import com.codeit.javaExam.member.Member;
 
 //@SpringBootApplication
 public class JavaExamApplication {
     public static void main(String[] args) {
 //		SpringApplication.run(JavaExamApplication.class, args);
-        Member aaron = new Member("Aaron", "aaron@example.com");
-        Member baron = new Member("Baron", "baron@example.com");
+        Administrator aaron = new Administrator("Aaron", "aaron@example.com", "DEVELOPER");
+        Administrator baron = new Administrator("Baron", "baron@example.com", "MANAGER");
 
         System.out.println("---");
         System.out.println(aaron);                    // 객체
