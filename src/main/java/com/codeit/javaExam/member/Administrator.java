@@ -5,7 +5,8 @@ import lombok.ToString;
 
 import java.time.LocalDate;
 
-@ToString           // 클래스 상속 시, 자식 클래스에 @ToString 사용하면 자식 클래스의 필드만 출력된다.
+//@ToString           // 클래스 상속 시, 자식 클래스에 @ToString 사용하면 자식 클래스의 필드만 출력된다.
+@ToString(callSuper = true)     // callSuper 옵션 : 클래스 상속 시, 자식 클래스의 필드와 상속받은 부모 클래스의 필드 모두 출력된다.
 public class Administrator extends Member {
     private String role;
     private LocalDate allocatedAt;
