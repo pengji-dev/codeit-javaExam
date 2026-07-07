@@ -8,7 +8,7 @@ public class JavaExamApplication {
     public static void main(String[] args) {
 //		SpringApplication.run(JavaExamApplication.class, args);
 
-        Administrator aaron = new Administrator(1, "Aaron", 10, "aaron@example.com", "DEVELOPER");
+        Administrator aaron = new Administrator(1, "Aaron", "DEVELOPER");
 
         System.out.println("---");
         System.out.println(aaron);              // 객체
