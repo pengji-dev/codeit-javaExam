@@ -15,6 +15,10 @@ public class Member {
     @Setter
     private String email;
 
+    public String toString() {
+        return String.format("Member(id=%s, name=%s, age=%s, email=%s)", id, name, age, email);
+    }
+
 //    public Member(Integer id, String name, int age, String email) {
 //        this.id = id;
 //        this.name = name;
