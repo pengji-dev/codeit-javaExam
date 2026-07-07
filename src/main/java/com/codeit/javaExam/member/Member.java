@@ -1,8 +1,9 @@
 package com.codeit.javaExam.member;
 
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 
-@AllArgsConstructor     // 해당 객체의 생성자 생성(모든 인자)
+@AllArgsConstructor(access = AccessLevel.PUBLIC)     // 생성자의 접근 제어자 옵션 설정 가능
 public class Member {
     private Integer id;
     private String name;
