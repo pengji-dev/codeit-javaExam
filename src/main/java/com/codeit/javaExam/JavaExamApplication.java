@@ -8,25 +8,12 @@ public class JavaExamApplication {
     public static void main(String[] args) {
 //		SpringApplication.run(JavaExamApplication.class, args);
 
-        Member aaron = new Member();
-
-        aaron.setId(1);
-        aaron.setName("Aaron");
-        aaron.setAge(10);
-        aaron.setEmail("aaron@example.com");
+        Member member = new Member(1, "Aaron", 10, "aaron@example.com");
 
         System.out.println("---");
-        System.out.println(aaron);              // 객체
-        System.out.println(aaron.toString());   // 객체
-
-//        aaron.setId();                        // @Setter 필드 단위로 설정되어 있지 않아 필드 수정 불가능
-//        aaron.setName();                      // @Setter 필드 단위로 설정되어 있지 않아 필드 수정 불가능
-//        aaron.setAge(20);                     // @Setter 필드 단위로 설정되었지만, 접근 제어자를 private으로 바꾸어서 외부에서 호출 불가
-        aaron.setEmail("aaron@different.com");  // @Setter (필드 단위)
-
-        System.out.println(aaron.getId());      // @Getter 클래스 단위로 적용하여 모든 필드 조회 가능
-        System.out.println(aaron.getName());    // @Getter (클래스 단위)
-        System.out.println(aaron.getAge());     // @Getter (클래스 단위)
-        System.out.println(aaron.getEmail());   // @Getter (클래스 단위)
+        System.out.println(member);                             // 객체 주소
+        System.out.println(member.toString());                  // 객체
+        System.out.println(member.MEMBER_TO_STRING_FORMAT);     // * 앞글자 소문자 : 물론 이렇게 호출할 수 있겠지만, 정상 사용은 아님.
+        System.out.println(Member.MEMBER_TO_STRING_FORMAT);     // * 앞글자 대문자 : Static 필드는 이렇게 호출하는 것이 정상.
     }
 }
